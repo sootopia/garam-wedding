@@ -17,7 +17,7 @@ const HeroSection = () => {
 
   return (
     <section css={S.heroStyle}>
-      <div className="container pb-48">
+      <div className="container">
         <figure className="relative mb-10">
           <img className="w-full" src="/static/images/hero_img.webp" alt="" />
           <svg
