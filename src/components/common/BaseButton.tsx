@@ -10,6 +10,7 @@ interface ButtonProps {
   bold?: boolean;
   medium?: boolean;
   size?: 'sm' | 'xs' | '';
+  className?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
   children: React.ReactNode;
 }
@@ -21,6 +22,7 @@ const BaseButton = ({
   bold = false,
   medium = false,
   size = '',
+  className,
   onClick,
   children,
 }: ButtonProps) => {
@@ -108,7 +110,9 @@ const BaseButton = ({
   return (
     <Component
       css={buttonStyles}
-      className={`${variant ? `button__${variant}` : ''} ${size ? `button__${size}` : ''}`}
+      className={`${variant ? `button__${variant}` : ''} ${size ? `button__${size}` : ''} ${
+        className || ''
+      }`}
       {...(tagType === 'a' && href ? { href } : {})}
       onClick={onClick}
     >
