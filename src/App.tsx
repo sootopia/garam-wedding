@@ -5,6 +5,7 @@ import GlobalStyles from './styles/GlobalStyles';
 import { theme } from './styles/theme';
 import HeroSection from './components/sections/HeroSection';
 import InvitationSection from './components/sections/InvitationSection';
+import AccountSection from './components/sections/AccountSection';
 
 const WrapperStyle = css`
   position: relative;
@@ -22,6 +23,7 @@ const App = () => {
         <div css={WrapperStyle}>
           <HeroSection />
           <InvitationSection />
+          <AccountSection />
         </div>
       </ThemeProvider>
     </>
