@@ -7,6 +7,7 @@ import HeroSection from './components/sections/HeroSection';
 import InvitationSection from './components/sections/InvitationSection';
 import AccountSection from './components/sections/AccountSection';
 import GallerySection from './components/sections/GallerySection';
+import CalendarSection from './components/sections/CalendarSection';
 
 const WrapperStyle = css`
   position: relative;
@@ -26,6 +27,7 @@ const App = () => {
           <InvitationSection />
           <AccountSection />
           <GallerySection />
+          <CalendarSection />
         </div>
       </ThemeProvider>
     </>
