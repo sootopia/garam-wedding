@@ -9,6 +9,9 @@ import AccountSection from './components/sections/AccountSection';
 import GallerySection from './components/sections/GallerySection';
 import CalendarSection from './components/sections/CalendarSection';
 import LocationSection from './components/sections/LocationSection';
+import FooterLayout from './components/footer/FooterLayout';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/ReactToastify.css';
 
 const WrapperStyle = css`
   position: relative;
@@ -17,6 +20,16 @@ const WrapperStyle = css`
   margin-right: auto;
   background-color: #fff;
 `;
+
+const contextClass = {
+  success: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+  error: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+  info: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+  warning: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+  default:
+    'p-6 bg-white text-sm font-bold text-gray-700 rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+  dark: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+};
 
 const App = () => {
   return (
@@ -30,7 +43,14 @@ const App = () => {
           <GallerySection />
           <CalendarSection />
           <LocationSection />
+          <FooterLayout />
         </div>
+
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          toastClassName={(context) => contextClass[context?.type || 'default']}
+        />
       </ThemeProvider>
     </>
   );
