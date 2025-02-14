@@ -13,6 +13,7 @@ const LocationSection = () => {
   let map: naver.maps.Map;
 
   const mapRef = useRef<HTMLDivElement | null>(null);
+  const markerRef = useRef<null | naver.maps.Marker>(null);
 
   // 네이버 지도 초기화
   useEffect(() => {
@@ -26,7 +27,7 @@ const LocationSection = () => {
 
     map = new naver.maps.Map(mapRef.current, mapOptions);
 
-    const marker: naver.maps.Marker = new naver.maps.Marker({
+    markerRef.current = new naver.maps.Marker({
       position: position,
       map,
       icon: {
