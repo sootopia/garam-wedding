@@ -8,6 +8,7 @@ import InvitationSection from './components/sections/InvitationSection';
 import AccountSection from './components/sections/AccountSection';
 import GallerySection from './components/sections/GallerySection';
 import CalendarSection from './components/sections/CalendarSection';
+import LocationSection from './components/sections/LocationSection';
 
 const WrapperStyle = css`
   position: relative;
@@ -28,6 +29,7 @@ const App = () => {
           <AccountSection />
           <GallerySection />
           <CalendarSection />
+          <LocationSection />
         </div>
       </ThemeProvider>
     </>
