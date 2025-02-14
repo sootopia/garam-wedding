@@ -24,15 +24,16 @@ const WrapperStyle = css`
   background-color: #fff;
 `;
 
-const contextClass = {
-  success: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
-  error: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
-  info: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
-  warning: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
-  default:
-    'p-6 bg-white text-sm font-bold text-gray-700 rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
-  dark: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
-};
+const contextClass: Record<'success' | 'error' | 'info' | 'warning' | 'default' | 'dark', string> =
+  {
+    success: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+    error: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+    info: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+    warning: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+    default:
+      'p-6 bg-white text-sm font-bold text-gray-700 rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+    dark: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
+  };
 
 const App = () => {
   // AOS 초기화
