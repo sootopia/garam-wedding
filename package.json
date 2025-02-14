@@ -13,11 +13,15 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@tailwindcss/vite": "^4.0.0",
+    "@types/aos": "^3.0.7",
     "@types/navermaps": "^3.7.8",
+    "aos": "^2.3.4",
     "gsap": "^3.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-photo-view": "^1.2.7",
+    "react-snowfall": "^2.2.0",
+    "react-toastify": "^11.0.3",
     "tailwindcss": "^4.0.0"
   },
   "devDependencies": {

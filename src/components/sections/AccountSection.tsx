@@ -3,6 +3,7 @@ import * as S from './AccountSection.styles';
 import BaseHeader from '../common/BaseHeader';
 import AccountAccordion from '../accordions/AccountAccordion';
 import BaseButton from '../common/BaseButton';
+import { toast } from 'react-toastify';
 
 interface Account {
   accountBank: string;
@@ -50,7 +51,7 @@ const AccountSection = () => {
 
   const handleCopy = (accountNumber: string) => {
     navigator.clipboard.writeText(accountNumber).then(() => {
-      alert('계좌번호가 복사되었습니다.');
+      toast('계좌번호가 복사되었습니다.');
     });
   };
 

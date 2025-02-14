@@ -149,7 +149,7 @@ const LocationSection = () => {
       {/* 지도 엘리먼트 */}
 
       <div className="container mt-10">
-        <div css={S.infoGroup}>
+        <div css={S.infoGroup} data-aos="fade-up">
           <h4>내비게이션 안내</h4>
           <p className="mb-5">원하시는 앱을 터치하시면 길 안내가 시작돼요.</p>
           <div className="grid grid-cols-3 gap-[6px]">
@@ -170,7 +170,7 @@ const LocationSection = () => {
 
         <hr className="my-[30px] border-[#e9e9e9] border-dashed" />
 
-        <div css={S.infoGroup}>
+        <div css={S.infoGroup} data-aos="fade-up">
           <h4>지하철</h4>
           <ul>
             <li className="pl-4">
@@ -186,7 +186,7 @@ const LocationSection = () => {
 
         <hr className="my-[30px] border-[#e9e9e9] border-dashed" />
 
-        <div css={S.infoGroup}>
+        <div css={S.infoGroup} data-aos="fade-up" data-aos-delay="100">
           <h4>버스</h4>
           <h5>동신초등학교건너(20936) 하차</h5>
           <ul>
@@ -229,7 +229,7 @@ const LocationSection = () => {
 
         <hr className="my-[30px] border-[#e9e9e9] border-dashed" />
 
-        <div css={S.infoGroup}>
+        <div css={S.infoGroup} data-aos="fade-up" data-aos-delay="200">
           <h4>자가용</h4>
           <p className="!leading-6">
             명칭검색 : &quot;대구신성교회&quot; <br />
