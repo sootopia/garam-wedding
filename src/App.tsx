@@ -15,6 +15,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Snowfall from 'react-snowfall';
 
 const WrapperStyle = css`
   position: relative;
@@ -34,6 +35,12 @@ const contextClass: Record<'success' | 'error' | 'info' | 'warning' | 'default' 
       'p-6 bg-white text-sm font-bold text-gray-700 rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
     dark: 'p-6 bg-white rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.14)]',
   };
+
+const petalImage1 = document.createElement('img');
+petalImage1.src = '/static/images/sakura_flake01.webp';
+
+const petalImage2 = document.createElement('img');
+petalImage2.src = '/static/images/sakura_flake02.webp';
 
 const App = () => {
   // AOS 초기화
@@ -61,6 +68,13 @@ const App = () => {
           position="top-center"
           autoClose={3000}
           toastClassName={(context) => contextClass[context?.type || 'default']}
+        />
+
+        <Snowfall
+          images={[petalImage1, petalImage2]}
+          snowflakeCount={150}
+          style={{ position: 'fixed', inset: '0px', zIndex: 9999 }}
+          opacity={[1, 1]}
         />
       </ThemeProvider>
     </>
