@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { useEffect } from 'react';
 import { ThemeProvider } from '@emotion/react';
 import { css } from '@emotion/react';
 import GlobalStyles from './styles/GlobalStyles';
@@ -12,6 +13,8 @@ import LocationSection from './components/sections/LocationSection';
 import FooterLayout from './components/footer/FooterLayout';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/ReactToastify.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WrapperStyle = css`
   position: relative;
@@ -32,6 +35,13 @@ const contextClass = {
 };
 
 const App = () => {
+  // AOS 초기화
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       <ThemeProvider theme={theme}>
