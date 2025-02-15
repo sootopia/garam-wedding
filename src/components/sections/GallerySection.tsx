@@ -8,10 +8,39 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 const GallerySection = () => {
   const [isExpanded, setIsExpanded] = useState<Boolean>(false);
-  const galleryItems: string[] = Array.from(
-    { length: 36 },
-    (_, i) => `/static/images/gallery${(i + 1).toString().padStart(2, '0')}.webp`,
-  );
+  const galleryItems: string[] = [
+    '/static/images/gallery01.webp',
+    '/static/images/gallery02.webp',
+    '/static/images/gallery03.webp',
+    '/static/images/gallery04.webp',
+    '/static/images/gallery06.webp',
+    '/static/images/gallery07.webp',
+    '/static/images/gallery08.webp',
+    '/static/images/gallery09.webp',
+    '/static/images/gallery10.webp',
+    '/static/images/gallery11.webp',
+    '/static/images/gallery12.webp',
+    '/static/images/gallery13.webp',
+    '/static/images/gallery14.webp',
+    '/static/images/gallery15.webp',
+    '/static/images/gallery16.webp',
+    '/static/images/gallery18.webp',
+    '/static/images/gallery19.webp',
+    '/static/images/gallery20.webp',
+    '/static/images/gallery21.webp',
+    '/static/images/gallery22.webp',
+    '/static/images/gallery23.webp',
+    '/static/images/gallery24.webp',
+    '/static/images/gallery25.webp',
+    '/static/images/gallery26.webp',
+    '/static/images/gallery28.webp',
+    '/static/images/gallery29.webp',
+    '/static/images/gallery30.webp',
+    '/static/images/gallery31.webp',
+    '/static/images/gallery33.webp',
+    '/static/images/gallery34.webp',
+    '/static/images/gallery35.webp',
+  ];
 
   const buttonText: React.ReactNode = !isExpanded ? (
     <>
